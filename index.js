@@ -6,33 +6,35 @@ console.log('its working');
 
 /* Task 1: Investigate the data above. Practice accessing data by console.log-ing the following pieces of data*/ 
 
-const twentyFourteenHTWC = fifaData.filter(item =>
+const twentyFourteen = fifaData.filter(item =>
    item["Year"] === 2014 && item["Stage"] === "Final"
 )
-// console.log(twentyFourteenHTWC);
+// console.log(twentyFourteen);
 
 /*(a) Home Team name for 2014 world cup final*/
-console.log("1a",twentyFourteenHTWC[0]["Home Team Name"]);
+console.log("1a",twentyFourteen[0]["Home Team Name"]);
 
 /*(b) Away Team name for 2014 world cup final*/
-console.log("1b",twentyFourteenHTWC[0]["Away Team Name"]);
+console.log("1b",twentyFourteen[0]["Away Team Name"]);
 
 /*(c) Home Team goals for 2014 world cup final*/
-console.log("1c",twentyFourteenHTWC[0]["Home Team Goals"]);
+console.log("1c",twentyFourteen[0]["Home Team Goals"]);
 
 /*(d) Away Team goals for 2014 world cup final*/
-console.log("1d",twentyFourteenHTWC[0]["Away Team Goals"]);
+console.log("1d",twentyFourteen[0]["Away Team Goals"]);
 
 /*(e) Winner of 2014 world cup final */
-console.log("1e",twentyFourteenHTWC[0]["Win conditions"]);
+console.log("1e",twentyFourteen[0]["Win conditions"]);
 
-/* Task 2: Create a function called  getFinals that takes `data` as an argument and returns an array of objects with only finals data */
+/* Task 2: Create a function called getFinals that takes `data` as an argument and returns an array of objects with only finals data */
 
-function getFinals(/* code here */) {
-
-    /* code here */
-
+function getFinals(finalsData) {
+    const finalsData = fifaData.filter(item => 
+        item["Stage"] === "Final"
+    )
+    return item["Stage"] === "Final"
 };
+console.log(getFinals(fifaData));
 
 /* Task 3: Implement a higher-order function called `getYears` that accepts the callback function `getFinals`, and returns an array called `years` containing all of the years in the dataset */
 
