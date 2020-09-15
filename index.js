@@ -28,11 +28,11 @@ console.log("1e",twentyFourteen[0]["Win conditions"]);
 
 /* Task 2: Create a function called getFinals that takes `data` as an argument and returns an array of objects with only finals data */
 
-function getFinals(finalsData) {
-    const finalsData = fifaData.filter(item => 
+function getFinals(data) {
+    const finals = data.filter(item => 
         item["Stage"] === "Final"
     )
-    return item["Stage"] === "Final"
+    return finals
 };
 console.log(getFinals(fifaData));
 
